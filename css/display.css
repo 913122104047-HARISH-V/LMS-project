@@ -1,0 +1,86 @@
+body { 
+    font-family: Arial, sans-serif; margin: 0px; 
+    } 
+    table 
+    {
+      background-color:rgb(53, 157, 255);
+      width:100%;
+      border: 1px solid;
+      border-collapse: collapse;
+      /*margin:30px;*/
+    }
+    
+    th, td {
+      font-weight: bold;
+      font-size:20px;
+      /*color: white;*?
+     /* text-decoration-color: white;*/
+      text-align: left;
+      padding: 8px;
+    }
+    th{
+        background-color:rgb(3, 5, 83);
+        color:white;
+    }
+    tr:nth-child(even) {
+      background-color: #D6EEEE;
+      color:black;
+    }
+    
+    tr:hover {background-color: white;}
+
+
+    /*
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+*/
+    button { 
+        margin:10px;
+        padding: 10px 20px; 
+        background-color: #007bff; color: #fff; 
+        border: none; border-radius: 4px; cursor: pointer; 
+    }
+
+ 
+    .add-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+    }
+
+    
+    .add-box input[type="submit"]:hover, button:hover { 
+        background-color: #0056b3; 
+    }
+
+    .add-box label { 
+     display: block; margin-bottom: 5px; 
+    }
+
+    .add-box input[type="text"], input[type="number"] { 
+       width: 200px; padding: 5px; 
+       margin-bottom: 10px; 
+       border: 1px solid #ccc; border-radius: 4px; 
+    }
+    

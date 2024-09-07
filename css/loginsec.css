@@ -1,0 +1,176 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+a {
+    color: white; /* Change link color */
+    text-decoration: none;
+}
+a:hover {
+    color: #66c2ff;
+   /* text-decoration: underline; /* Add underline on hover */
+}
+/* Header styles */
+header {
+    background-color: rgb(53, 157, 255);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+header h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow */
+}
+/* Navigation styles */
+nav {
+    background-color: rgb(5, 64, 173); /* Darken navigation background */
+    padding: 10px 0;
+    text-align: center;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    font-size: 18px;
+}
+
+
+.login-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.login-box label { 
+ display: block; margin-bottom: 30px; font-weight: bold;
+}
+
+.login-box input[type="text"], .login-box input[type="password"], .login-box input[type="number"] { 
+   width: 200px; padding: 10px; 
+   margin-bottom: 30px; 
+   border: 1px solid #ccc; border-radius: 4px; 
+}
+
+.login-box button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(53, 157, 255);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-box button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.btn-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Apply styles to the welcome-section */
+#welcome-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+/* Center the content */
+#welcome-section .contentimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the content container */
+#welcome-section .contentimg > div {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Style the heading */
+#welcome-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style the paragraphs */
+#welcome-section p {
+
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Style the list */
+#welcome-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+/* Style the list items */
+#welcome-section li {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Style the image */
+#welcome-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer styles */
+footer {
+    position: fixed;
+    background-color: #333; /* Darken footer background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
