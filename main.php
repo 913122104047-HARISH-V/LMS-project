@@ -7,7 +7,6 @@
     <title>Velammal Library Management System</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
      body {
     background-image: url("photos/bg.jpg");
@@ -26,7 +25,7 @@
 
 <nav>
     <ul>
-        <li><a href="details.php">Dash board</a></li>
+         <li><a href="details.php">Dash board</a></li>
         <li><a href='display_books.php'>Books</a></li>
         <li><a href='display_publisher.php'>Publishers</a></li>
         <li><a href='display_readers.php'>Readers</a></li>
