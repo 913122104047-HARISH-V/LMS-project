@@ -47,7 +47,7 @@
             $stmt->execute();
             $result = $stmt->get_result();
             if ($result && $result->num_rows > 0) {
-                header("Location: display_books.php");
+                header("Location: details.php");
                 exit();
             } else {
                 $suberr = "*ID or password is wrong";
