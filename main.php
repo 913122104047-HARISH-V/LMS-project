@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,26 +39,10 @@
          </div>
         </li>
         <li><a href='display_lib_staffs.php'>Library Staffs</a></li>
-        <li><a onclick="logout()"> <i class="fas fa-sign-out-alt"></i>Logout</a></li>  
+        <li><a href="logout.php"> <i class="fas fa-sign-out-alt"></i>Logout</a></li>  
     </ul>
 </nav>
 
-<script>
-function logout() 
-{
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() 
-    {
-        if (this.readyState == 4 && this.status == 200) {
-            // Redirect the user to the login page after successful logout
-            window.location.href = "index.php";
-        }
-    };
-    // Send a request to the logout endpoint on the server
-    xhttp.open("GET", "index.php", true);
-    xhttp.send();
-}
-</script>
 <script src="js/display.js"></script>
 </body>
 

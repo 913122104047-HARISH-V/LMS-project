@@ -1,5 +1,5 @@
 
-<?php include("main.php"); ?>
+<?php include("main.php"); include('session.php');?>
 <link rel="stylesheet" href="css/display.css">
 
 <?php

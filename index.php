@@ -19,42 +19,41 @@
         </ul>
     </nav>
     <?php
-    $passerr = $stafferr = "";
     $pass = $staffid = $suberr = "";
 
     function inputdata($data) {
         return stripslashes(htmlspecialchars(trim($data)));
     }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST['staffid'])) {
-            $stafferr = "Staff ID is required";
-        } else {
+    session_start();
+    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+        {
             $staffid = inputdata($_POST['staffid']);
-        }
-
-        if (empty($_POST['password'])) {
-            $passerr = "Password is required";
-        } else {
             $pass = inputdata($_POST['password']);
-        }
-
-        if (empty($passerr) && empty($stafferr)) {
             include('dbcon.php');
-            $sql = "SELECT * FROM authentication_system WHERE staff_ID= ? AND password = ?";
+            $sql = "SELECT * FROM authentication_system WHERE staff_ID = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("is", $staffid, $pass);
+            $stmt->bind_param("i", $staffid);
             $stmt->execute();
             $result = $stmt->get_result();
-            if ($result && $result->num_rows > 0) {
-                header("Location: details.php");
-                exit();
-            } else {
-                $suberr = "*ID or password is wrong";
+
+            if ($result && $result->num_rows > 0) 
+            {
+                $row = $result->fetch_assoc();
+                if (strcmp($pass, $row['password'])==0) 
+                {
+                    $_SESSION['staff_id'] = $row['staff_ID'];
+                    header("Location: details.php");
+                    exit();
+                } 
+                else {
+                    $suberr = "*ID or password iss wrong";
+                }
+            } 
+            else {
+                $suberr = "*ID or password is wrongs";
             }
         }
-    }
-    ?>
+?>
     <div class="login-box" style="display: none;">
         <button class="btn-close" onclick="closeLoginForm()">&times;</button>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -63,12 +62,10 @@
                 <tr>
                     <td><label for="staff">Enter Staff ID: </label></td>
                     <td><input type="number" id="staff" name="staffid" placeholder="Staff ID" required></td>
-                    <td><span><?php echo $stafferr; ?></span></td>
                 </tr>
                 <tr>
                     <td><label for="patpass">Enter Password: </label></td>
                     <td><input type="password" id="patpass" name="password" placeholder="Password" required></td>
-                    <td><span><?php echo $passerr; ?></span></td>
                 </tr>
                 <tr>
                     <td colspan="3"><span style="color:red"><?php echo $suberr; ?></span></td>

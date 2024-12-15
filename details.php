@@ -38,7 +38,9 @@
     color: #555;
 }
 </style>
+
 <?php
+include('session.php');
 include('main.php'); // Assuming this contains some necessary includes or session handling
 include('dbcon.php'); // Database connection
 

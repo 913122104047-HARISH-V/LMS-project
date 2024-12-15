@@ -1,4 +1,4 @@
-<?php include('main.php');?>
+<?php include('main.php');include('session.php');?>
 <?php
 include('dbcon.php');
 
