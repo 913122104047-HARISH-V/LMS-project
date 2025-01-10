@@ -1,4 +1,4 @@
-body { 
+/* body { 
     font-family: Arial, sans-serif; margin: 0px; 
     } 
     table 
@@ -7,14 +7,11 @@ body {
       width:100%;
       border: 1px solid;
       border-collapse: collapse;
-      /*margin:30px;*/
     }
     
     th, td {
       font-weight: bold;
       font-size:20px;
-      /*color: white;*?
-     /* text-decoration-color: white;*/
       text-align: left;
       padding: 8px;
     }
@@ -29,27 +26,6 @@ body {
     
     tr:hover {background-color: white;}
 
-
-    /*
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    th, td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-*/
     button { 
         margin:10px;
         padding: 10px 20px; 
@@ -66,7 +42,7 @@ body {
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow for depth */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     }
 
     
@@ -83,4 +59,86 @@ body {
        margin-bottom: 10px; 
        border: 1px solid #ccc; border-radius: 4px; 
     }
-    
+     */
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #0056b3;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #e6f7ff;
+}
+
+/* Input Fields */
+.add-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.add-box input[type="text"], .add-box input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-box input[type="submit"] {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-box input[type="submit"]:hover {
+    background-color: #003d80;
+}
+
+/* Buttons */
+button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+
+
