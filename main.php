@@ -33,7 +33,7 @@
            <button class="dropbtn">Transactions <i class="fa fa-caret-down"></i> </button>
               <div class="dropdown-content">
                <a href="borrow.php">Lending</a>
-               <a href="fineborrphpow.">Fines for Book Delay</a>
+               <a href="fineborrow.php">Fines for Book Delay</a>
                <a href="dis_borrowed_books.php">View Returned Books</a>
              </div>
          </div>
