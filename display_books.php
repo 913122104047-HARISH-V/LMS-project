@@ -19,6 +19,7 @@ public function addbook()
     $categories = $_POST['categories'];
     $edition = $_POST['edition'];
     $price = $_POST['price'];
+    $quantity=$_POST['quantity'];
     $sql = "INSERT INTO books (ISBN, book_name,author_name,publisher_ID,categories,edition,price) VALUES ($isbn,'$title','$author_no',$pubid,'$categories',$edition, $price)";
      if($conn->query($sql)===TRUE)
        echo "super";
@@ -36,9 +37,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) 
 {
     echo "<table>";
-    echo "<tr><th>ISBN</th><th>Book_title</th><th>Author Name</th><th>Publisher_ID</th><th>Categories</th><th>Edition</th><th>Price</th></tr>";
+    echo "<tr><th>ISBN</th><th>Book_title</th><th>Author Name</th><th>Publisher_ID</th><th>Categories</th><th>Edition</th><th>Price</th><th>Quantity</th></tr>";
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row["ISBN"]."</td><td>".$row["book_name"]."</td><td>".$row["author_name"]."</td><td>".$row["publisher_ID"]."</td><td>".$row["categories"]."</td><td>".$row["edition"]."</td><td>".$row["price"]."</td></tr>";
+        echo "<tr><td>".$row["ISBN"]."</td><td>".$row["book_name"]."</td><td>".$row["author_name"]."</td><td>".$row["publisher_ID"]."</td><td>".$row["categories"]."</td><td>".$row["edition"]."</td><td>".$row["price"]."</td><td>".$row["quantity"]."</td></tr>";
     }
     echo "</table>";
 } 
@@ -49,7 +50,7 @@ else {
 
 }
 $obj = new books;
-if(isset($_POST['addboo'])) {
+if(isset($_POST['addbook'])) {
     $obj->addbook();
 }
 ?>
@@ -89,8 +90,12 @@ if(isset($_POST['addboo'])) {
                 <td><label for="price">Price:</label></td>
                 <td><input type="number" id="price" name="price" placeholder="Price" required></td>
             </tr>
+            <tr>
+                <td><label for="quantity">Quantity :</label></td>
+                <td><input type="number" id="quantity" name="quantity" placeholder="Quantity" required></td>
+            </tr>
         </table>
-        <button type="submit" name="addboo">Submit</button>
+        <button type="submit" name="addbook">Submit</button>
     </form>
 </div>
 
